@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    <title>Project</title>
+body{
+ background-color: blue;
+}
+h1 {
+  color: red;
+  margin-left: 30px;
+}
+</style>
+</head>
+<body>
+ <h1>Student Grading</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Points</th>
+        <th>Name</th>
+	<th>Term</th>
+	<th>MarkGroup</th>
+        
+    </tr>
+    </thead>
+    <tbody>
+        {% for row in output_data %} 
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>{{row[3]}}</td>
+		
+            </tr>
+        {% endfor %}        
+    </tbody>
+</table>
+</body>
+</html>
